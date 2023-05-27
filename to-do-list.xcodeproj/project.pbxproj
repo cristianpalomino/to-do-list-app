@@ -16,6 +16,10 @@
 		8708F7E52A158ECA00E3BF9B /* to_do_listTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8708F7E42A158ECA00E3BF9B /* to_do_listTests.swift */; };
 		8708F7EF2A158ECA00E3BF9B /* to_do_listUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8708F7EE2A158ECA00E3BF9B /* to_do_listUITests.swift */; };
 		8708F7F12A158ECA00E3BF9B /* to_do_listUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8708F7F02A158ECA00E3BF9B /* to_do_listUITestsLaunchTests.swift */; };
+		87EB9F1F2A21745700474ECB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB9F1E2A21745700474ECB /* MainViewController.swift */; };
+		87EB9F212A2176B400474ECB /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB9F202A2176B400474ECB /* AddTaskViewController.swift */; };
+		87EB9F232A21778B00474ECB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB9F222A21778B00474ECB /* DetailsViewController.swift */; };
+		87EB9F252A2177D700474ECB /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB9F242A2177D700474ECB /* EditTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		8708F7EA2A158ECA00E3BF9B /* to-do-listUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "to-do-listUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8708F7EE2A158ECA00E3BF9B /* to_do_listUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = to_do_listUITests.swift; sourceTree = "<group>"; };
 		8708F7F02A158ECA00E3BF9B /* to_do_listUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = to_do_listUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		87EB9F1E2A21745700474ECB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		87EB9F202A2176B400474ECB /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		87EB9F222A21778B00474ECB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		87EB9F242A2177D700474ECB /* EditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 		8708F7CC2A158EC800E3BF9B /* to-do-list */ = {
 			isa = PBXGroup;
 			children = (
+				87EB9F1D2A21744000474ECB /* Views */,
 				8708F7CD2A158EC800E3BF9B /* AppDelegate.swift */,
 				8708F7CF2A158EC800E3BF9B /* SceneDelegate.swift */,
 				8708F7D12A158EC800E3BF9B /* ViewController.swift */,
@@ -125,6 +134,17 @@
 				8708F7F02A158ECA00E3BF9B /* to_do_listUITestsLaunchTests.swift */,
 			);
 			path = "to-do-listUITests";
+			sourceTree = "<group>";
+		};
+		87EB9F1D2A21744000474ECB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87EB9F1E2A21745700474ECB /* MainViewController.swift */,
+				87EB9F202A2176B400474ECB /* AddTaskViewController.swift */,
+				87EB9F222A21778B00474ECB /* DetailsViewController.swift */,
+				87EB9F242A2177D700474ECB /* EditTaskViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +281,10 @@
 				8708F7D22A158EC800E3BF9B /* ViewController.swift in Sources */,
 				8708F7CE2A158EC800E3BF9B /* AppDelegate.swift in Sources */,
 				8708F7D02A158EC800E3BF9B /* SceneDelegate.swift in Sources */,
+				87EB9F1F2A21745700474ECB /* MainViewController.swift in Sources */,
+				87EB9F212A2176B400474ECB /* AddTaskViewController.swift in Sources */,
+				87EB9F252A2177D700474ECB /* EditTaskViewController.swift in Sources */,
+				87EB9F232A21778B00474ECB /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
