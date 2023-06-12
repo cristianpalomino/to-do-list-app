@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9LA-dN-lbC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -43,16 +43,29 @@
                                     <segue destination="r0G-Ax-xoU" kind="presentation" id="sfr-ex-nBu"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bUQ-Kb-zX4">
+                                <rect key="frame" x="16" y="103" width="361" height="632"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gB7-4a-Q08"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gB7-4a-Q08" firstAttribute="trailing" secondItem="aeI-dS-LFn" secondAttribute="trailing" constant="16" id="NqP-VT-Chb"/>
+                            <constraint firstItem="aeI-dS-LFn" firstAttribute="top" secondItem="bUQ-Kb-zX4" secondAttribute="bottom" constant="8" symbolic="YES" id="U16-om-dXM"/>
                             <constraint firstItem="aeI-dS-LFn" firstAttribute="leading" secondItem="gB7-4a-Q08" secondAttribute="leading" constant="16" id="ZiF-iI-ZQ1"/>
                             <constraint firstItem="gB7-4a-Q08" firstAttribute="bottom" secondItem="aeI-dS-LFn" secondAttribute="bottom" constant="16" id="i1l-mX-tC5"/>
+                            <constraint firstItem="bUQ-Kb-zX4" firstAttribute="leading" secondItem="gB7-4a-Q08" secondAttribute="leading" constant="16" id="jeH-Ly-Bu9"/>
+                            <constraint firstItem="bUQ-Kb-zX4" firstAttribute="top" secondItem="gB7-4a-Q08" secondAttribute="top" id="lzs-dY-BCW"/>
+                            <constraint firstItem="gB7-4a-Q08" firstAttribute="trailing" secondItem="bUQ-Kb-zX4" secondAttribute="trailing" constant="16" id="v0r-Dx-gFI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="To Do List" largeTitleDisplayMode="always" id="VyR-ii-BU6"/>
+                    <connections>
+                        <outlet property="addTaskButton" destination="aeI-dS-LFn" id="R2L-lo-Mwi"/>
+                        <outlet property="tableTask" destination="bUQ-Kb-zX4" id="eKk-SG-MiZ"/>
+                        <outlet property="titleNavi" destination="VyR-ii-BU6" id="0ie-Bg-xoh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPs-vh-aDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,12 +138,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Task" id="XbC-mb-28p"/>
                     <connections>
-                        <outlet property="Title" destination="6aV-LV-CjV" id="idP-P9-Ydx"/>
-                        <outlet property="addButton" destination="aHj-MP-M6k" id="I6j-FW-jZL"/>
-                        <outlet property="description" destination="RpG-s0-hhs" id="Zmu-sY-eaj"/>
-                        <outlet property="inputDescription" destination="RpG-s0-hhs" id="yZz-6l-Zco"/>
-                        <outlet property="inputTitle" destination="6aV-LV-CjV" id="6dT-SK-NXF"/>
-                        <outlet property="title" destination="6aV-LV-CjV" id="nVD-wE-f01"/>
+                        <outlet property="butonAddTask" destination="aHj-MP-M6k" id="skN-7O-C5R"/>
+                        <outlet property="discriptionLabel" destination="U9V-Dh-0B7" id="Ac9-7R-y9c"/>
+                        <outlet property="inputDescription" destination="RpG-s0-hhs" id="HNh-i8-CL7"/>
+                        <outlet property="inputTitle" destination="6aV-LV-CjV" id="Tgu-zs-QXk"/>
+                        <outlet property="titleLabel" destination="eMN-2A-U03" id="erZ-A9-XYH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUx-7R-7rY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -222,6 +234,13 @@
                             <constraint firstItem="x0H-lz-mMj" firstAttribute="top" secondItem="ebD-HI-6Um" secondAttribute="bottom" constant="16" id="qQ9-TF-XxP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="deleteButton" destination="07S-SY-oSB" id="zly-QF-Mpe"/>
+                        <outlet property="descriptionLabel" destination="x0H-lz-mMj" id="l8x-je-cTH"/>
+                        <outlet property="editButton" destination="szP-dE-Dmg" id="TUm-Ha-KLC"/>
+                        <outlet property="titleDescriptionLabel" destination="ebD-HI-6Um" id="Apn-J8-0dY"/>
+                        <outlet property="titleLabel" destination="Q7E-zU-K5s" id="WV6-Wm-Jmd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgU-C2-7gM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -305,6 +324,14 @@
                             <constraint firstItem="hjI-7A-4MD" firstAttribute="top" secondItem="fgZ-bB-tHf" secondAttribute="bottom" constant="25" id="uaD-3w-9Zd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="editDescriptionLabel" destination="viS-1j-ezV" id="GpS-w1-nos"/>
+                        <outlet property="editTitleLabel" destination="yVj-b4-3JM" id="1DZ-xm-SO3"/>
+                        <outlet property="inputEditDescription" destination="fgZ-bB-tHf" id="bIS-7W-4OL"/>
+                        <outlet property="inputEditTitle" destination="RMO-EI-Ifj" id="nwX-g9-Fjp"/>
+                        <outlet property="saveButton" destination="hjI-7A-4MD" id="gY8-x0-ajW"/>
+                        <outlet property="titleLabel" destination="P77-BS-ZWr" id="2TV-Io-D4s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yQt-XT-Raw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

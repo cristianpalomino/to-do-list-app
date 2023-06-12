@@ -9,8 +9,11 @@ import UIKit
 import Foundation
 
 class MainViewController: UIViewController {
-
-    override func viewDidLoad() {
+    @IBOutlet weak var titleNavi: UINavigationItem!
+    @IBOutlet weak var tableTask: UITableView!
+    @IBOutlet weak var addTaskButton: UIButton!
+    
+        override func viewDidLoad() {
         view.backgroundColor = .gray
     }
 }
