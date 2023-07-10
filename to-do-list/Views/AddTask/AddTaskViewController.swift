@@ -21,8 +21,9 @@ class AddTaskViewController: UIViewController {
     
     @objc private func addTask() {
         if let title: String = inputTitle.text , let description: String = inputDescription.text {
-            var Task = Task(title: title, description: description)
-            print(Task)
+            let task = Task(title: title, description: description)
+            data.addTask(task: task)
         }
     }
 }
+;

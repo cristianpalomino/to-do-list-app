@@ -19,7 +19,9 @@
 		87EB9F212A2176B400474ECB /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB9F202A2176B400474ECB /* AddTaskViewController.swift */; };
 		87EB9F232A21778B00474ECB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB9F222A21778B00474ECB /* DetailsViewController.swift */; };
 		87EB9F252A2177D700474ECB /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EB9F242A2177D700474ECB /* EditTaskViewController.swift */; };
-		ECB6CECC2A36DB0E00E5477A /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB6CECB2A36DB0E00E5477A /* data.swift */; };
+		ECB6CECC2A36DB0E00E5477A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB6CECB2A36DB0E00E5477A /* Task.swift */; };
+		ECB6CECF2A38AB8400E5477A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB6CECE2A38AB8400E5477A /* Data.swift */; };
+		ECCF49A02A5B7F18003E799B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCF499F2A5B7F18003E799B /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +58,9 @@
 		87EB9F202A2176B400474ECB /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		87EB9F222A21778B00474ECB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		87EB9F242A2177D700474ECB /* EditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
-		ECB6CECB2A36DB0E00E5477A /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		ECB6CECB2A36DB0E00E5477A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		ECB6CECE2A38AB8400E5477A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		ECCF499F2A5B7F18003E799B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +115,6 @@
 				87EB9F1D2A21744000474ECB /* Views */,
 				8708F7CF2A158EC800E3BF9B /* SceneDelegate.swift */,
 				8708F7CD2A158EC800E3BF9B /* AppDelegate.swift */,
-				8708F7D32A158EC800E3BF9B /* Main.storyboard */,
 				8708F7D62A158ECA00E3BF9B /* Assets.xcassets */,
 				8708F7D82A158ECA00E3BF9B /* LaunchScreen.storyboard */,
 				8708F7DB2A158ECA00E3BF9B /* Info.plist */,
@@ -140,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				ECB6CEC92A36B18D00E5477A /* MainView */,
+				8708F7D32A158EC800E3BF9B /* Main.storyboard */,
 				ECB6CEC82A369ED400E5477A /* TaskDetails */,
 				ECB6CEC62A369D3400E5477A /* AddTask */,
 				ECB6CEC52A369CCA00E5477A /* TaskEdit */,
@@ -175,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				87EB9F1E2A21745700474ECB /* MainViewController.swift */,
+				ECCF499F2A5B7F18003E799B /* TableViewCell.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -182,7 +187,8 @@
 		ECB6CECA2A36DAEF00E5477A /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				ECB6CECB2A36DB0E00E5477A /* data.swift */,
+				ECB6CECB2A36DB0E00E5477A /* Task.swift */,
+				ECB6CECE2A38AB8400E5477A /* Data.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -321,10 +327,12 @@
 				8708F7CE2A158EC800E3BF9B /* AppDelegate.swift in Sources */,
 				8708F7D02A158EC800E3BF9B /* SceneDelegate.swift in Sources */,
 				87EB9F1F2A21745700474ECB /* MainViewController.swift in Sources */,
+				ECCF49A02A5B7F18003E799B /* TableViewCell.swift in Sources */,
 				87EB9F212A2176B400474ECB /* AddTaskViewController.swift in Sources */,
 				87EB9F252A2177D700474ECB /* EditTaskViewController.swift in Sources */,
-				ECB6CECC2A36DB0E00E5477A /* data.swift in Sources */,
+				ECB6CECC2A36DB0E00E5477A /* Task.swift in Sources */,
 				87EB9F232A21778B00474ECB /* DetailsViewController.swift in Sources */,
+				ECB6CECF2A38AB8400E5477A /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

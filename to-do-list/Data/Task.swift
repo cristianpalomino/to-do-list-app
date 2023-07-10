@@ -8,6 +8,7 @@
 import Foundation
 
 struct Task {
+    
     let title: String
     let description: String
     
