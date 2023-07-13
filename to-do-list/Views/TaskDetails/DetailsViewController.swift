@@ -14,8 +14,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var detailsNavigationTitle: UINavigationItem!
     
     override func viewDidLoad() {
-        view.backgroundColor = .gray
+        detailsNavigationTitle.title = "Alemania 7 - 1 Brazil"
     }
 }
