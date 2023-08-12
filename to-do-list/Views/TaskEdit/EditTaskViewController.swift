@@ -23,15 +23,34 @@ class EditTaskViewController: UIViewController {
     var task: Task?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        editTaksDidTapped()
+    }
+    
+    func editTaksDidTapped() {
         inputEditTitle.text = task?.title
         inputEditDescription.text = task?.description
+        inputEditTitle.layer.borderWidth = 1.0
+        inputEditTitle.layer.borderColor = UIColor.black.cgColor
+        inputEditDescription.layer.borderWidth = 1.0
+        inputEditDescription.layer.borderColor = UIColor.black.cgColor
         saveButton.addTarget(self, action: #selector(saveEdited), for: .touchUpInside)
     }
     
     @objc private func saveEdited() {
-        task?.title = inputEditTitle.text!
-        task?.description = inputEditDescription.text
-        delegate?.saveTaskTapped()
-        self.dismiss(animated: true, completion: nil)
+        if let title: String = inputEditTitle.text , !title.isEmpty , let description: String = inputEditDescription.text{
+            task?.title = title
+            task?.description = description
+            delegate?.saveTaskTapped()
+            self.dismiss(animated: true, completion: nil)
+        }else {
+            put_a_title()
+        }
+    }
+    
+    func put_a_title() {
+        let alert = UIAlertController(title: "Wait", message: "Put A Title", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
