@@ -13,6 +13,7 @@ protocol EditTaskDelegate: AnyObject {
 }
 
 class EditTaskViewController: UIViewController {
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var editTitleLabel: UILabel!
     @IBOutlet weak var inputEditTitle: UITextField!
@@ -44,11 +45,11 @@ class EditTaskViewController: UIViewController {
             delegate?.saveTaskTapped()
             self.dismiss(animated: true, completion: nil)
         }else {
-            put_a_title()
+            setTitle()
         }
     }
     
-    func put_a_title() {
+    func setTitle() {
         let alert = UIAlertController(title: "Wait", message: "Put A Title", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)

@@ -14,6 +14,7 @@ protocol TaskDetailsDelegate: AnyObject {
 }
 
 class DetailsViewController: UIViewController {
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var titleDescriptionLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
@@ -23,12 +24,12 @@ class DetailsViewController: UIViewController {
     weak var delegate: TaskDetailsDelegate?
     var task: Task?
     var index: Int?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         detailsButtonDidTapped()
     }
-    
+
     @objc private func editTaskPushButton() {
         let editTaskNavigationController = getViewController("EditTaskNavigationController")
         let viewController = editTaskNavigationController.children[0]
@@ -37,7 +38,7 @@ class DetailsViewController: UIViewController {
         editTaskViewController?.task = task
         navigationController?.pushViewController(viewController, animated: true)
     }
-    
+
     @objc private func deleteTaskPushButton() {
         if let index = index {
             data.delete(index: index)
@@ -45,10 +46,10 @@ class DetailsViewController: UIViewController {
         delegate?.deleteButtonTaped()
         self.dismiss(animated: true, completion: nil)
     }
-    
-    func getViewController(_ ID: String) -> UIViewController {
+
+    func getViewController(_ id: String) -> UIViewController {
         let storyBoard = UIStoryboard(name: "Main", bundle: .main)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: ID)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: id)
         return viewController
     }
     
@@ -64,6 +65,7 @@ class DetailsViewController: UIViewController {
 }
 
 extension DetailsViewController: EditTaskDelegate {
+
     func saveTaskTapped() {
         delegate?.editButtonTaped()
     }

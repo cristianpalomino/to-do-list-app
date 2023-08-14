@@ -26,9 +26,9 @@ class MainViewController: UIViewController {
         navigationController?.present(addTaskNavigationController, animated: true)
     }
     
-    func getViewController(_ ID: String) -> UIViewController {
+    func getViewController(_ id: String) -> UIViewController {
         let storyBoard = UIStoryboard(name: "Main", bundle: .main)
-        let viewController = storyBoard.instantiateViewController(withIdentifier: ID)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: id)
         return viewController
     }
 }
@@ -49,7 +49,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.descriptionLabel?.text = data.dataSource[indexPath.row].description
         cell.titleLabel.font = UIFont.systemFont(ofSize: 20)
         cell.descriptionLabel.font = UIFont.systemFont(ofSize: 12)
-        
         return cell
     }
     

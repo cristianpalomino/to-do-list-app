@@ -13,6 +13,7 @@ protocol AddTaskDelegate: AnyObject {
 }
 
 class AddTaskViewController: UIViewController {
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var inputTitle: UITextField!
     @IBOutlet weak var inputDescription: UITextView!
@@ -20,6 +21,7 @@ class AddTaskViewController: UIViewController {
     weak var delegate: AddTaskDelegate?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         addTaskButtonDidTapped()
     }
     
@@ -38,11 +40,11 @@ class AddTaskViewController: UIViewController {
             delegate?.addTaskTaped()
             self.dismiss(animated: true, completion: nil)
         } else {
-            put_a_title()
+            setTitle()
         }
     }
     
-    func put_a_title() {
+    func setTitle() {
         let alert = UIAlertController(title: "Wait", message: "Put A Title", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
